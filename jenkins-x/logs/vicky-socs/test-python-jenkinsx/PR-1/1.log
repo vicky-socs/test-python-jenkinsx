@@ -1,0 +1,100 @@
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-gfpjs-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-rbw7g[0m
+{"level":"warn","ts":1584530235.7229967,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584530235.7234638,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-gfpjs-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-9hzz7[0m
+{"level":"warn","ts":1584530236.7121003,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1584530236.7131174,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-gfpjs-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-gfpjs-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-vicky-socs-test-python-jenkinsx-gfpjs-4nng4[0m
+{"level":"warn","ts":1584530262.8502288,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584530265.3655806,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/vicky-socs/test-python-jenkinsx.git @ master in path /workspace/source"}
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-gfpjs-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=staging:08b8dfdaf7615ea0e796cc8b1e035fd5037c97c0,1:a6a65db7d4a9ccbfcfa7b0ddd94d461ce44f19ae
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow a6a65db7d4a9ccbfcfa7b0ddd94d461ce44f19ae: 08b8dfdaf7615ea0e796cc8b1e035fd5037c97c0:
+DEBUG: ran git fetch --unshallow origin a6a65db7d4a9ccbfcfa7b0ddd94d461ce44f19ae: 08b8dfdaf7615ea0e796cc8b1e035fd5037c97c0: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch staging
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout staging
+DEBUG: ran git checkout staging in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 08b8dfdaf7615ea0e796cc8b1e035fd5037c97c0
+DEBUG: ran git reset --hard 08b8dfdaf7615ea0e796cc8b1e035fd5037c97c0 in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge a6a65db7d4a9ccbfcfa7b0ddd94d461ce44f19ae
+DEBUG: ran git merge a6a65db7d4a9ccbfcfa7b0ddd94d461ce44f19ae in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 08b8dfdaf7615ea0e796cc8b1e035fd5037c97c0..HEAD
+Merged SHA a6a65db7d4a9ccbfcfa7b0ddd94d461ce44f19ae with commit message 'test 2' into base branch staging
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-gfpjs-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-gfpjs-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image python:onbuild        
+2020/03/18 11:17:50 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] Error while retrieving image from cache: getting file info: stat /workspace/sha256:43780a8431c53f4afd734ad795e03127c0c607337a60639c5903a51a03535c22: no such file or directory 
+[36mINFO[0m[0002] Downloading base image python:onbuild        
+2020/03/18 11:17:52 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0004] Executing 3 build triggers                   
+[36mINFO[0m[0004] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0004] Checking for cached layer 685249416972.dkr.ecr.ap-south-1.amazonaws.com/todo/cache:20ed5631d983ab35ddcc4224cde40d34ba4dcc68c4ee26635bbf30d01c3c2af6... 
+[36mINFO[0m[0004] Using caching version of cmd: RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0004] Using files from context: [/workspace/source] 
+[36mINFO[0m[0004] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0004] cmd: EXPOSE                                  
+[36mINFO[0m[0004] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0004] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0004] Taking snapshot of full filesystem...        
+[36mINFO[0m[0004] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0004] COPY requirements.txt /usr/src/app/          
+[36mINFO[0m[0004] Taking snapshot of files...                  
+[36mINFO[0m[0004] RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0004] Found cached layer, extracting to filesystem 
+[36mINFO[0m[0004] Taking snapshot of files...                  
+[36mINFO[0m[0004] Using files from context: [/workspace/source] 
+[36mINFO[0m[0004] COPY . /usr/src/app                          
+[36mINFO[0m[0004] Taking snapshot of files...                  
+[36mINFO[0m[0004] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0004] COPY requirements.txt .                      
+[36mINFO[0m[0004] Taking snapshot of files...                  
+[36mINFO[0m[0004] ENV PORT 8080                                
+[36mINFO[0m[0004] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0004] EXPOSE 8080                                  
+[36mINFO[0m[0004] cmd: EXPOSE                                  
+[36mINFO[0m[0004] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0004] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0004] ENTRYPOINT ["python"]                        
+[36mINFO[0m[0004] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0004] CMD ["app.py"]                               
+[36mINFO[0m[0004] No files changed in this command, skipping snapshotting. 
+2020/03/18 11:17:55 existing blob: sha256:f0db43b9b8da254cebc77bf871006df01219e195b9853616b9f708f124a00f3a
+2020/03/18 11:17:55 existing blob: sha256:ece825d3308bbf98f708d95475ccd880497a1e2979ff4ef2534d49049a18488f
+2020/03/18 11:17:55 existing blob: sha256:e96bc319bce0351d1157092352bc5f85f8800c745388e60e86d06dec99285b45
+2020/03/18 11:17:55 existing blob: sha256:e10b68fb77e6e91453cd4c1b02e2d77aa23a857cd8eb250617129d074478e1a5
+2020/03/18 11:17:55 existing blob: sha256:06854774e2f35e4763103a446112c67322913a6177bea69eb49663e0166e6d6d
+2020/03/18 11:17:55 existing blob: sha256:2d21c767035c4593de8bf7ad9781aa83ba110871d1a50871192f4e3480e6f11d
+2020/03/18 11:17:55 existing blob: sha256:1c7fe136a31e13a1c879245672184ced3b9fc590989ba42a522a57b071a9c1aa
+2020/03/18 11:17:55 existing blob: sha256:e2c0fb34dff3a1d32346b92e53fb88a14d1987b402a2348cb379c039687fabe2
+2020/03/18 11:17:55 pushed blob: sha256:52772d90790caed9f14be622ea8208e63cf350de41dc01baebdf47db1b095e83
+2020/03/18 11:17:55 pushed blob: sha256:0a7376ff6eedb031c70a0ee39ae8b76f64254380d0aadb819bcaa6ac2731b4d9
+2020/03/18 11:17:55 pushed blob: sha256:5f3f33f5b96cddbb9276f949b08fba00716b41617da23312658ecddee14ea42f
+2020/03/18 11:17:55 pushed blob: sha256:fac058e450cce12977a787021b8882dc84c14335cb363e84aad69b2620dd1067
+2020/03/18 11:17:55 pushed blob: sha256:10c6457f0b577676215b723d394a1c38ad5a68defb1a0697f6144f09f2323e7b
+2020/03/18 11:17:56 existing blob: sha256:490280dbcfb772eb5731f059e38fcfacaeb75b4d005af7c249fd51926db2bd62
+2020/03/18 11:17:56 685249416972.dkr.ecr.ap-south-1.amazonaws.com/vicky-socs/test-python-jenkinsx:0.0.0-SNAPSHOT-PR-1-1: digest: sha256:aaaf34cfd2c39ae572820279b0b1e8544ae7edf3ca25f25f6a59826f94547d4c size: 2385
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-gfpjs-1[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-gfpjs-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-make-preview[0m
+/bin/sh: line 0: cd: /workspace/source/charts/preview: No such file or directory
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-promote-make-preview'. The execution of the pipeline has stopped.[0m
