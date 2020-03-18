@@ -1,0 +1,145 @@
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-t5qb9-3[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-tr58v[0m
+{"level":"warn","ts":1584536073.5295718,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584536073.5300856,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-t5qb9-3[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-ftlfb[0m
+{"level":"warn","ts":1584536074.1178176,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1584536074.1189675,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-t5qb9-3[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-t5qb9-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-vicky-socs-test-python-jenkinsx-t5qb9-qk59z[0m
+{"level":"warn","ts":1584536080.3876328,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584536082.935848,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/vicky-socs/test-python-jenkinsx.git @ v0.0.8 in path /workspace/source"}
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-t5qb9-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=staging:903df94cf9c19c56402b31238ef870fbd232ca11
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-t5qb9-3[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-t5qb9-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-t5qb9-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image python:onbuild        
+2020/03/18 12:54:45 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] Error while retrieving image from cache: getting file info: stat /workspace/sha256:43780a8431c53f4afd734ad795e03127c0c607337a60639c5903a51a03535c22: no such file or directory 
+[36mINFO[0m[0002] Downloading base image python:onbuild        
+2020/03/18 12:54:47 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0004] Executing 3 build triggers                   
+[36mINFO[0m[0004] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0004] Checking for cached layer 685249416972.dkr.ecr.ap-south-1.amazonaws.com/todo/cache:20ed5631d983ab35ddcc4224cde40d34ba4dcc68c4ee26635bbf30d01c3c2af6... 
+[36mINFO[0m[0004] Using caching version of cmd: RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0004] Using files from context: [/workspace/source] 
+[36mINFO[0m[0004] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0004] cmd: EXPOSE                                  
+[36mINFO[0m[0004] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0004] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0004] Taking snapshot of full filesystem...        
+[36mINFO[0m[0004] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0004] COPY requirements.txt /usr/src/app/          
+[36mINFO[0m[0004] Taking snapshot of files...                  
+[36mINFO[0m[0004] RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0004] Found cached layer, extracting to filesystem 
+[36mINFO[0m[0004] Taking snapshot of files...                  
+[36mINFO[0m[0005] Using files from context: [/workspace/source] 
+[36mINFO[0m[0005] COPY . /usr/src/app                          
+[36mINFO[0m[0005] Taking snapshot of files...                  
+[36mINFO[0m[0005] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0005] COPY requirements.txt .                      
+[36mINFO[0m[0005] Taking snapshot of files...                  
+[36mINFO[0m[0005] ENV PORT 8080                                
+[36mINFO[0m[0005] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0005] EXPOSE 8080                                  
+[36mINFO[0m[0005] cmd: EXPOSE                                  
+[36mINFO[0m[0005] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0005] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0005] ENTRYPOINT ["python"]                        
+[36mINFO[0m[0005] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0005] CMD ["app.py"]                               
+[36mINFO[0m[0005] No files changed in this command, skipping snapshotting. 
+2020/03/18 12:54:50 existing blob: sha256:e10b68fb77e6e91453cd4c1b02e2d77aa23a857cd8eb250617129d074478e1a5
+2020/03/18 12:54:50 existing blob: sha256:1c7fe136a31e13a1c879245672184ced3b9fc590989ba42a522a57b071a9c1aa
+2020/03/18 12:54:50 existing blob: sha256:ece825d3308bbf98f708d95475ccd880497a1e2979ff4ef2534d49049a18488f
+2020/03/18 12:54:50 existing blob: sha256:f0db43b9b8da254cebc77bf871006df01219e195b9853616b9f708f124a00f3a
+2020/03/18 12:54:50 existing blob: sha256:e2c0fb34dff3a1d32346b92e53fb88a14d1987b402a2348cb379c039687fabe2
+2020/03/18 12:54:50 existing blob: sha256:e96bc319bce0351d1157092352bc5f85f8800c745388e60e86d06dec99285b45
+2020/03/18 12:54:50 existing blob: sha256:06854774e2f35e4763103a446112c67322913a6177bea69eb49663e0166e6d6d
+2020/03/18 12:54:50 existing blob: sha256:2d21c767035c4593de8bf7ad9781aa83ba110871d1a50871192f4e3480e6f11d
+2020/03/18 12:54:50 pushed blob: sha256:8ba487a2426b3a76b8f4c9c134e72d267b7f1973c5d6a2be061a6e795e0f2f6a
+2020/03/18 12:54:50 pushed blob: sha256:2eac1534199f8002acc85bf8f5744a9336132d620e0c17ad25469b8fb03d3a1a
+2020/03/18 12:54:50 pushed blob: sha256:49def45ae243baaafa1cb5782528b23cd6e5976fca4b0d9162a0db2178e46cdb
+2020/03/18 12:54:51 pushed blob: sha256:f13d87c40e5ca791bab1e4cc9d1c07fee2236cae2c74569547272982b5bdd969
+2020/03/18 12:54:51 pushed blob: sha256:5aaf6cb69b461278fcaf84d6ea94a039ad827ad689803180cbc4a58749572b92
+2020/03/18 12:54:51 existing blob: sha256:490280dbcfb772eb5731f059e38fcfacaeb75b4d005af7c249fd51926db2bd62
+2020/03/18 12:54:51 685249416972.dkr.ecr.ap-south-1.amazonaws.com/vicky-socs/test-python-jenkinsx:0.0.8: digest: sha256:a53a9584ff6c1f8637f1c5ccf82088275c33ede3ac1d38e0f475405a2addde20 size: 2385
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-t5qb9-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-t5qb9-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/test-python-jenkinsx to an unshallow repository
+Generating change log from git ref ea55d2e3f11f970839464b28c163e56a0a1c342e => 0ae4ee6acd618b69c493dabf7c10e40661f6373c
+Associating user x-0 in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 99d0002e08fec6cc9256f8d3236caba5b4348404 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 99d0002e08fec6cc9256f8d3236caba5b4348404 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+Associating user x-0 in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit a6d2819530ccb8bf8cdb9970f7e081a6b5900274 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit a6d2819530ccb8bf8cdb9970f7e081a6b5900274 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit de09fedbf9787a5e2fde0c06f206d8bf7a88233c with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit de09fedbf9787a5e2fde0c06f206d8bf7a88233c with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 743a897af5708499983a63ecfa000ad9e4fb6ca1 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 743a897af5708499983a63ecfa000ad9e4fb6ca1 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+WARNING: No release found for vicky-socs/test-python-jenkinsx and tag v0.0.8 so creating a new release
+Updated the release information at https://github.com/vicky-socs/test-python-jenkinsx/releases/tag/v0.0.8
+generated: /workspace/source/charts/test-python-jenkinsx/templates/release.yaml
+Created Release test-python-jenkinsx-0-0-8 resource in namespace **
+Updating PipelineActivity vicky-socs-test-python-jenkinsx-staging-3 with version 0.0.8
+Updated PipelineActivities vicky-socs-test-python-jenkinsx-staging-3 with release notes URL: https://github.com/vicky-socs/test-python-jenkinsx/releases/tag/v0.0.8
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-t5qb9-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file test-python-jenkinsx-0.0.8.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-t5qb9-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app test-python-jenkinsx version 0.0.8 to namespace **-staging
+WARNING: 
+Created Pull Request: https://github.com/vicky-socs/environment-non-prod-cluster-staging/pull/8
+Added label updatebot to Pull Request https://github.com/vicky-socs/environment-non-prod-cluster-staging/pull/8
+got git provider status pending from PR https://github.com/vicky-socs/environment-non-prod-cluster-staging/pull/8
+got git provider status pending from PR https://github.com/vicky-socs/environment-non-prod-cluster-staging/pull/8
+got git provider status pending from PR https://github.com/vicky-socs/environment-non-prod-cluster-staging/pull/8
+got git provider status pending from PR https://github.com/vicky-socs/environment-non-prod-cluster-staging/pull/8
+got git provider status pending from PR https://github.com/vicky-socs/environment-non-prod-cluster-staging/pull/8
+Pull Request https://github.com/vicky-socs/environment-non-prod-cluster-staging/pull/8 is merged at sha c362281aaf00e83ddf0e7bbb61fbb6a3b9c1b708
+Pull Request merged but we are not waiting for the update pipeline to complete!
