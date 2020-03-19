@@ -1,0 +1,142 @@
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-zljtj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-4rhpz[0m
+{"level":"warn","ts":1584612435.5388114,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584612435.5393429,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-zljtj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-sdl8q[0m
+{"level":"warn","ts":1584612436.6033,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1584612436.6093817,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-zljtj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-zljtj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-vicky-socs-test-python-jenkinsx-zljtj-j45ld[0m
+{"level":"warn","ts":1584612441.6844668,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584612444.2860281,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/vicky-socs/test-python-jenkinsx.git @ master in path /workspace/source"}
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-zljtj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:1b76ac78b1931f21faff572ed11cb37f52be2aa7,9:11f18c32309b93df59aa3d086444f11506d91a0c
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 11f18c32309b93df59aa3d086444f11506d91a0c: 1b76ac78b1931f21faff572ed11cb37f52be2aa7:
+DEBUG: ran git fetch --unshallow origin 11f18c32309b93df59aa3d086444f11506d91a0c: 1b76ac78b1931f21faff572ed11cb37f52be2aa7: in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 1b76ac78b1931f21faff572ed11cb37f52be2aa7
+DEBUG: ran git reset --hard 1b76ac78b1931f21faff572ed11cb37f52be2aa7 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 11f18c32309b93df59aa3d086444f11506d91a0c
+DEBUG: ran git merge 11f18c32309b93df59aa3d086444f11506d91a0c in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 1b76ac78b1931f21faff572ed11cb37f52be2aa7..HEAD
+Merged SHA f20f1c1f46543ac3de85a2cf329e32cca539de7d with commit message 'Merge commit '11f18c32309b93df59aa3d086444f11506d91a0c'' into base branch master
+Merged SHA 11f18c32309b93df59aa3d086444f11506d91a0c with commit message 'Merge pull request #8 from vicky-socs/feature-f1' into base branch master
+Merged SHA f6f72a9801abfd1eb16ecaf6bf5224c16b33c060 with commit message 'staging.yml deleted' into base branch master
+Merged SHA ca5033b00cb7be45c89d630cf44d908853c2ba2f with commit message 'Merge pull request #7 from vicky-socs/feature-f1' into base branch master
+Merged SHA dcdea72a0d63dcfe4b27475c1b9494e63f78afdb with commit message 'test 1' into base branch master
+Merged SHA 93171a47e4ab7801cdb08eb256d63a2660f2d151 with commit message 'Merge pull request #6 from vicky-socs/feature' into base branch master
+Merged SHA f3d2b1dfcce1e774bcd6d67fc7f4447dfb6ed3aa with commit message 'test' into base branch master
+Merged SHA 3834897282e2d619ec556f6ca3a97a5d637cd1cb with commit message 'Merge pull request #5 from vicky-socs/feature' into base branch master
+Merged SHA 747a520e3eb9a9f989fc26499ef483cc4b2188e7 with commit message 'test' into base branch master
+Merged SHA 2566ffdd8325f8569488bf84a0943051bc0355df with commit message 'test' into base branch master
+Merged SHA 40038a3d368178b6cef0b3a7c495a6066778ce9b with commit message 'Merge pull request #4 from vicky-socs/feature' into base branch master
+Merged SHA 9f713b4ec1faa51e9c761f1af747b4d954b27d0a with commit message 'Test' into base branch master
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-zljtj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-zljtj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image python:onbuild        
+2020/03/19 10:07:28 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] Error while retrieving image from cache: getting file info: stat /workspace/sha256:43780a8431c53f4afd734ad795e03127c0c607337a60639c5903a51a03535c22: no such file or directory 
+[36mINFO[0m[0002] Downloading base image python:onbuild        
+2020/03/19 10:07:30 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0004] Executing 3 build triggers                   
+[36mINFO[0m[0004] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0004] Checking for cached layer 685249416972.dkr.ecr.ap-south-1.amazonaws.com/todo/cache:20ed5631d983ab35ddcc4224cde40d34ba4dcc68c4ee26635bbf30d01c3c2af6... 
+[36mINFO[0m[0004] Using caching version of cmd: RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0004] Using files from context: [/workspace/source] 
+[36mINFO[0m[0004] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0004] cmd: EXPOSE                                  
+[36mINFO[0m[0004] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0004] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0004] Taking snapshot of full filesystem...        
+[36mINFO[0m[0004] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0004] COPY requirements.txt /usr/src/app/          
+[36mINFO[0m[0004] Taking snapshot of files...                  
+[36mINFO[0m[0004] RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0004] Found cached layer, extracting to filesystem 
+[36mINFO[0m[0004] Taking snapshot of files...                  
+[36mINFO[0m[0005] Using files from context: [/workspace/source] 
+[36mINFO[0m[0005] COPY . /usr/src/app                          
+[36mINFO[0m[0005] Taking snapshot of files...                  
+[36mINFO[0m[0005] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0005] COPY requirements.txt .                      
+[36mINFO[0m[0005] Taking snapshot of files...                  
+[36mINFO[0m[0005] ENV PORT 8080                                
+[36mINFO[0m[0005] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0005] EXPOSE 8080                                  
+[36mINFO[0m[0005] cmd: EXPOSE                                  
+[36mINFO[0m[0005] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0005] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0005] ENTRYPOINT ["python"]                        
+[36mINFO[0m[0005] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0005] CMD ["app.py"]                               
+[36mINFO[0m[0005] No files changed in this command, skipping snapshotting. 
+2020/03/19 10:07:33 existing blob: sha256:2d21c767035c4593de8bf7ad9781aa83ba110871d1a50871192f4e3480e6f11d
+2020/03/19 10:07:33 existing blob: sha256:1c7fe136a31e13a1c879245672184ced3b9fc590989ba42a522a57b071a9c1aa
+2020/03/19 10:07:33 existing blob: sha256:e2c0fb34dff3a1d32346b92e53fb88a14d1987b402a2348cb379c039687fabe2
+2020/03/19 10:07:33 existing blob: sha256:ece825d3308bbf98f708d95475ccd880497a1e2979ff4ef2534d49049a18488f
+2020/03/19 10:07:33 existing blob: sha256:e96bc319bce0351d1157092352bc5f85f8800c745388e60e86d06dec99285b45
+2020/03/19 10:07:33 existing blob: sha256:06854774e2f35e4763103a446112c67322913a6177bea69eb49663e0166e6d6d
+2020/03/19 10:07:33 existing blob: sha256:e10b68fb77e6e91453cd4c1b02e2d77aa23a857cd8eb250617129d074478e1a5
+2020/03/19 10:07:33 existing blob: sha256:490280dbcfb772eb5731f059e38fcfacaeb75b4d005af7c249fd51926db2bd62
+2020/03/19 10:07:33 existing blob: sha256:f0db43b9b8da254cebc77bf871006df01219e195b9853616b9f708f124a00f3a
+2020/03/19 10:07:33 pushed blob: sha256:a1677f5a42c00cba2b3fd96b6bb4bd436aa46ca95a970d17b37c6af740e5f7f6
+2020/03/19 10:07:33 pushed blob: sha256:9ae880c3a823f56d034cdf9cc9c1139e808f122a0e13074c00ed802f1da6cb2f
+2020/03/19 10:07:33 pushed blob: sha256:30af92aeb0c056f2bd7485fff3c8e5e31ac227f4442f37104d7c3838a1537107
+2020/03/19 10:07:33 pushed blob: sha256:3f73ada0cac9221d0118ceeb075cc69256ffb7953f9e1094d3212c7ae9ca4089
+2020/03/19 10:07:34 pushed blob: sha256:a4cc777f7181d31c813d826f7074d03a9ea4d77c59863ada039e4eef587dd386
+2020/03/19 10:07:34 685249416972.dkr.ecr.ap-south-1.amazonaws.com/vicky-socs/test-python-jenkinsx:0.0.0-SNAPSHOT-PR-9-1: digest: sha256:460e8fbf5bf0bceb97dc5b9bf88debfbbcf95e6e757bf6e3922802aedb58c226 size: 2385
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-zljtj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-zljtj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-make-preview[0m
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-9-1/" Chart.yaml
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-9-1/" ../*/Chart.yaml
+sed -i -e "s|repository:.*|repository: 685249416972.dkr.ecr.ap-south-1.amazonaws.com\/vicky-socs\/test-python-jenkinsx|" values.yaml
+sed -i -e "s/tag:.*/tag: 0.0.0-SNAPSHOT-PR-9-1/" values.yaml
+echo "  version: 0.0.0-SNAPSHOT-PR-9-1" >> requirements.yaml
+** step helm build
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-zljtj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-preview[0m
+Creating a preview
+Found commit author match for: ******** with email address: 60379210+********@users.noreply.github.com
+Created environment vicky-socs-test-python-jenkinsx-pr-9
+Namespace **-vicky-socs-test-python-jenkinsx-pr-9 created 
+expose:
+  Annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-delete-policy: hook-succeeded
+  config:
+    domain: 3.6.244.161.nip.io
+    exposer: Ingress
+    http: "true"
+preview:
+  image:
+    repository: 685249416972.dkr.ecr.ap-south-1.amazonaws.com/vicky-socs/test-python-jenkinsx
+    tag: 0.0.0-SNAPSHOT-PR-9-1
+
+Updating PipelineActivities vicky-socs-test-python-jenkinsx-pr-9-1 which has status Running
+Preview application is now available at: http://test-python-jenkinsx.**-vicky-socs-test-python-jenkinsx-pr-9.3.6.244.161.nip.io
