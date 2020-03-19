@@ -1,0 +1,135 @@
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-4gr6n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-lwkg9[0m
+{"level":"warn","ts":1584628799.6754332,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584628799.6758926,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-4gr6n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-pwvtb[0m
+{"level":"warn","ts":1584628800.6282837,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1584628800.630319,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-4gr6n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-4gr6n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-vicky-socs-test-python-jenkinsx-4gr6n-vtbvs[0m
+{"level":"warn","ts":1584628805.7944667,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584628808.4795756,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/vicky-socs/test-python-jenkinsx.git @ master in path /workspace/source"}
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-4gr6n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=staging:11f18c32309b93df59aa3d086444f11506d91a0c,13:448563e40ce389ca78484c7842881984439d121f
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 448563e40ce389ca78484c7842881984439d121f: 11f18c32309b93df59aa3d086444f11506d91a0c:
+DEBUG: ran git fetch --unshallow origin 448563e40ce389ca78484c7842881984439d121f: 11f18c32309b93df59aa3d086444f11506d91a0c: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch staging
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout staging
+DEBUG: ran git checkout staging in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 11f18c32309b93df59aa3d086444f11506d91a0c
+DEBUG: ran git reset --hard 11f18c32309b93df59aa3d086444f11506d91a0c in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 448563e40ce389ca78484c7842881984439d121f
+DEBUG: ran git merge 448563e40ce389ca78484c7842881984439d121f in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 11f18c32309b93df59aa3d086444f11506d91a0c..HEAD
+Merged SHA d750548177939450d16b0ffc487fe3a38efc2d96 with commit message 'Merge commit '448563e40ce389ca78484c7842881984439d121f' into staging' into base branch staging
+Merged SHA 448563e40ce389ca78484c7842881984439d121f with commit message 'aw' into base branch staging
+Merged SHA 1f70979613f526700c5862179c57f8e11db63192 with commit message 'aib' into base branch staging
+Merged SHA 45585c7acf9f1c69774c0a40e77d8379a82fb185 with commit message 'test' into base branch staging
+Merged SHA d2da4151a04080ae718d18190d5970394c6ae169 with commit message 'replicaCount 3 for PR-env' into base branch staging
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-4gr6n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-4gr6n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image python:onbuild        
+2020/03/19 14:40:12 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] Error while retrieving image from cache: getting file info: stat /workspace/sha256:43780a8431c53f4afd734ad795e03127c0c607337a60639c5903a51a03535c22: no such file or directory 
+[36mINFO[0m[0002] Downloading base image python:onbuild        
+2020/03/19 14:40:14 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0003] Executing 3 build triggers                   
+[36mINFO[0m[0003] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0003] Checking for cached layer 685249416972.dkr.ecr.ap-south-1.amazonaws.com/todo/cache:20ed5631d983ab35ddcc4224cde40d34ba4dcc68c4ee26635bbf30d01c3c2af6... 
+[36mINFO[0m[0004] Using caching version of cmd: RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0004] Using files from context: [/workspace/source] 
+[36mINFO[0m[0004] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0004] cmd: EXPOSE                                  
+[36mINFO[0m[0004] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0004] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0004] Taking snapshot of full filesystem...        
+[36mINFO[0m[0004] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0004] COPY requirements.txt /usr/src/app/          
+[36mINFO[0m[0004] Taking snapshot of files...                  
+[36mINFO[0m[0004] RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0004] Found cached layer, extracting to filesystem 
+[36mINFO[0m[0004] Taking snapshot of files...                  
+[36mINFO[0m[0004] Using files from context: [/workspace/source] 
+[36mINFO[0m[0004] COPY . /usr/src/app                          
+[36mINFO[0m[0004] Taking snapshot of files...                  
+[36mINFO[0m[0005] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0005] COPY requirements.txt .                      
+[36mINFO[0m[0005] Taking snapshot of files...                  
+[36mINFO[0m[0005] ENV PORT 8080                                
+[36mINFO[0m[0005] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0005] EXPOSE 8080                                  
+[36mINFO[0m[0005] cmd: EXPOSE                                  
+[36mINFO[0m[0005] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0005] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0005] ENTRYPOINT ["python"]                        
+[36mINFO[0m[0005] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0005] CMD ["app.py"]                               
+[36mINFO[0m[0005] No files changed in this command, skipping snapshotting. 
+2020/03/19 14:40:17 existing blob: sha256:ece825d3308bbf98f708d95475ccd880497a1e2979ff4ef2534d49049a18488f
+2020/03/19 14:40:17 existing blob: sha256:1c7fe136a31e13a1c879245672184ced3b9fc590989ba42a522a57b071a9c1aa
+2020/03/19 14:40:17 existing blob: sha256:e2c0fb34dff3a1d32346b92e53fb88a14d1987b402a2348cb379c039687fabe2
+2020/03/19 14:40:17 existing blob: sha256:f0db43b9b8da254cebc77bf871006df01219e195b9853616b9f708f124a00f3a
+2020/03/19 14:40:17 existing blob: sha256:e96bc319bce0351d1157092352bc5f85f8800c745388e60e86d06dec99285b45
+2020/03/19 14:40:17 existing blob: sha256:2d21c767035c4593de8bf7ad9781aa83ba110871d1a50871192f4e3480e6f11d
+2020/03/19 14:40:17 existing blob: sha256:06854774e2f35e4763103a446112c67322913a6177bea69eb49663e0166e6d6d
+2020/03/19 14:40:17 existing blob: sha256:490280dbcfb772eb5731f059e38fcfacaeb75b4d005af7c249fd51926db2bd62
+2020/03/19 14:40:17 existing blob: sha256:e10b68fb77e6e91453cd4c1b02e2d77aa23a857cd8eb250617129d074478e1a5
+2020/03/19 14:40:17 pushed blob: sha256:13001f1e825d92aaf52933222f1c35299e272a2c2002ea829d06fde59974c7ac
+2020/03/19 14:40:17 pushed blob: sha256:b7bc67663af8e9c3c007b3befa0dd2878e3410dcd9d184eead4df504a9296fc9
+2020/03/19 14:40:17 pushed blob: sha256:f6be96423865ef007dbcdb3d1ee458e9ac97f583b2220f7bb3b85133b70a01fb
+2020/03/19 14:40:17 pushed blob: sha256:ad76a735bcb3d596564cda7c59f565f3bc0d5661abba2c66431e07e19d202bb1
+2020/03/19 14:40:18 pushed blob: sha256:157566e428ce664ee285f84348172725024833d4ea0d02522666941c030e65a3
+2020/03/19 14:40:18 685249416972.dkr.ecr.ap-south-1.amazonaws.com/vicky-socs/test-python-jenkinsx:0.0.0-SNAPSHOT-PR-13-1: digest: sha256:46c9a4570c7bf0058f62856b4f5a4dcb4669387274f7b3d3ec2a58796c7bc6fb size: 2385
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-4gr6n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-4gr6n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-make-preview[0m
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-13-1/" Chart.yaml
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-13-1/" ../*/Chart.yaml
+sed -i -e "s|repository:.*|repository: 685249416972.dkr.ecr.ap-south-1.amazonaws.com\/vicky-socs\/test-python-jenkinsx|" values.yaml
+sed -i -e "s/tag:.*/tag: 0.0.0-SNAPSHOT-PR-13-1/" values.yaml
+echo "  version: 0.0.0-SNAPSHOT-PR-13-1" >> requirements.yaml
+** step helm build
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+
+Showing logs for build [32mvicky-socs-test-python-jenkinsx-4gr6n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-preview[0m
+Creating a preview
+Created environment vicky-socs-test-python-jenkinsx-pr-13
+Namespace **-vicky-socs-test-python-jenkinsx-pr-13 created 
+expose:
+  Annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-delete-policy: hook-succeeded
+  config:
+    domain: 3.6.244.161.nip.io
+    exposer: Ingress
+    http: "true"
+preview:
+  image:
+    repository: 685249416972.dkr.ecr.ap-south-1.amazonaws.com/vicky-socs/test-python-jenkinsx
+    tag: 0.0.0-SNAPSHOT-PR-13-1
+
+Updating PipelineActivities vicky-socs-test-python-jenkinsx-pr-13-1 which has status Running
+Preview application is now available at: http://test-python-jenkinsx.**-vicky-socs-test-python-jenkinsx-pr-13.3.6.244.161.nip.io
