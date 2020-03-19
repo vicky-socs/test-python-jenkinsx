@@ -1,0 +1,10 @@
+buildPack: python
+  overrides:
+       - name: jx-promote
+         stage: promote
+         step: 
+	   name: jx-promote-to-staging
+           sh: jx promote -b --env=staging --timeout 1h --version \$(cat ../../VERSION)
+         type: replace
+
+	
