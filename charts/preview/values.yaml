@@ -14,8 +14,7 @@ cleanup:
   Annotations:
     helm.sh/hook: pre-delete
     helm.sh/hook-delete-policy: hook-succeeded
-preview:	
- replicaCount: 3
+replicaCount: 3
 
 preview:
   image:
