@@ -21,4 +21,4 @@ preview:
     repository:
     tag:
     pullPolicy: IfNotPresent
-  replicaCount: 3 
+  replicaCount: 5 
